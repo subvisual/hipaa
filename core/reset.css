@@ -48,6 +48,10 @@ table {
 	border-spacing: 0;
 }
 
+body, html {
+  font-family: proxima-nova;
+}
+
 :global {
   body, html, #container {
     height: 100%;
