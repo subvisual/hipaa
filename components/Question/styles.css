@@ -1,9 +1,13 @@
+:root {
+  --modal-width: 600px;
+}
+
 .question {
+  position: relative;
+
   display: flex;
   justify-content: center;
   width: 100%;
-  position: relative;
-
 
   &::before {
     content: ' ';
@@ -19,7 +23,7 @@
 }
 
 .questionModal{
-  width: 600px;
+  width: var(--modal-width);
   min-height: 240px;
   padding: 40px;
   border-radius: 8px;
@@ -102,4 +106,41 @@
     border-radius: 50%;
     background-color: #0bacf0;
   }
+}
+
+.context {
+  position: absolute;
+  top: 50%;
+  right: calc(50% + ( var(--modal-width) / 2 ) + 80px);
+
+  width: 130px;
+
+  transform: translateY(-50%);
+}
+
+.category {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.questionCount {
+  margin-top: 10px;
+}
+
+.currentQuestion {
+  font-size: 60px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.totalQuestions {
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  opacity: 0.6;
 }

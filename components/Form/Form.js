@@ -13,7 +13,13 @@ function Form() {
         <div className={styles.timeline}>
         </div>
         <form className={ styles.form }>
-          <Question title="Testing this sheeeet" name="question1">
+          <Question
+            title="Testing this sheeeet"
+            name="question1"
+            category="Technical Requirements"
+            currentQuestion="1"
+            totalQuestions="10"
+          >
             This is a dummy-proof explanation of the question.
           </Question>
         </form>
