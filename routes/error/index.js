@@ -9,15 +9,13 @@
  */
 
 import React from 'react';
-import { Layout } from '../../components';
-
 function ErrorPage({ title, message, stackTrace }) {
   return (
-    <Layout>
+    <div>
       <h1>{title}</h1>
       <p>{message}</p>
       {stackTrace && <pre>{stackTrace}</pre>}
-    </Layout>
+    </div>
   );
 }
 

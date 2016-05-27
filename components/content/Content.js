@@ -9,14 +9,13 @@
  */
 
 import React from 'react';
-import Layout from '../layout/Layout.js';
 
 function Content({ title, html }) {
   return (
-    <Layout>
+    <div>
       <h1>{title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </Layout>
+    </div>
   );
 }
 

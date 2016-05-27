@@ -10,5 +10,4 @@
 
 
 export Content from './content/Content';
-export Layout from './layout/Layout';
-export Layout from './Form/Form';
+export Form from './Form/Form';
