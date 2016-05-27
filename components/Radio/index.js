@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
-import styles from './Radio.css';
+import styles from './styles.css';
 
 function Radio(props) {
   const { checked, label, ...rest } = props;
