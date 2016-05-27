@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
+import { reduxForm } from 'redux-form';
 import styles from './Form.css';
 import Question from '../Question';
 
-function Form() {
+function Form({ fields }) {
   return (
     <div>
       <header />
@@ -15,7 +16,7 @@ function Form() {
         <form className={ styles.form }>
           <Question
             title="Testing this sheeeet"
-            name="question1"
+            input={fields.question1}
             category="Technical Requirements"
             currentQuestion="1"
             totalQuestions="10"
@@ -28,4 +29,15 @@ function Form() {
   );
 }
 
-export default Form;
+Form.propTypes = {
+  fields: PropTypes.object.isRequired
+};
+
+export default reduxForm({
+  form: 'answers',
+  fields: [
+    'question1',
+    'question2',
+    'question3',
+  ],
+})(Form);

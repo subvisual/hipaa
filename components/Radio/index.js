@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './styles.css';
 
 function Radio(props) {
-  const { checked, label, ...rest } = props;
+  const { checked, label, onChange, value, name } = props;
 
   const className = classNames({
     [styles.root]: true,
@@ -12,8 +12,8 @@ function Radio(props) {
   });
 
   return (
-    <label className={className}>
-      <inut {...props} className={styles.input} />
+    <label onClick={() => onChange(value)} className={className}>
+      <inut {...props} type="radio" value={value} className={styles.input} />
       {label}
     </label>
   );

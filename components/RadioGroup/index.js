@@ -2,13 +2,24 @@ import React, { Component, PropTypes } from 'react';
 import Radio from '../Radio';
 import styles from './styles.css';
 
-function RadioGroup({ inputs }) {
-  console.log(arguments);
+function RadioGroup({ input }) {
+  const options = [
+    { label: 'Yes', value: 'yes' },
+    { label: 'No', value: 'no' },
+    { label: 'Doesn\'t apply', value: 'not_applicable' },
+  ];
+
+  console.log(input);
   return (
     <div className={styles.root}>
-      {inputs.map((input, key) =>
+      {options.map((option, key) =>
         <div key={key} className={styles.item}>
-          <Radio {...input} />
+          <Radio
+            {...input}
+            value={option.value}
+            label={option.label}
+            checked={option.value === input.value}
+          />
         </div>
       )}
     </div>
@@ -16,7 +27,7 @@ function RadioGroup({ inputs }) {
 }
 
 RadioGroup.propTypes = {
-  inputs: PropTypes.array.isRequired,
+  input: PropTypes.object.isRequired,
 };
 
 export default RadioGroup;
