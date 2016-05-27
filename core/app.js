@@ -13,6 +13,7 @@ import 'whatwg-fetch';
 import { createApp } from 'react-app';
 import store from './store';
 import routes from '../routes';
+import './reset.css';
 
 createApp({
   routes,

@@ -8,22 +8,18 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import home from './home';
-import about from './about';
-import error from './error';
-import form from './form';
+ import React from 'react';
+ import { Form } from '../../components';
 
-const routes = {
+ export default {
 
-  path: '/',
+   path: '/form',
 
-  children: [
-    home,
-    about,
-    error,
-    form,
-  ],
+   action() {
+     return {
+       title: 'Are you HIPAA compliant?',
+       component: Form,
+     };
+   },
 
-};
-
-export default routes;
+ };

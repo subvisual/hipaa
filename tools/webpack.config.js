@@ -155,6 +155,7 @@ const config = {
       // Add vendor prefixes to CSS rules using values from caniuse.com
       // https://github.com/postcss/autoprefixer
       require('autoprefixer')(),
+      require('postcss-modules-local-by-default')(),
     ];
   },
 
