@@ -54,6 +54,7 @@ body, html {
 
 :global {
   body, html, #container {
+		-webkit-font-smoothing: antialiased;
     height: 100%;
   }
 }

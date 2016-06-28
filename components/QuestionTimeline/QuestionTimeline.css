@@ -1,0 +1,44 @@
+@import "../variables.css";
+
+.root {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid $seafoam-blue;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.itemSelected {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $color-blue;
+  background-image: linear-gradient(to bottom, $seafoam-blue, $color-blue);
+}
+
+.input {
+  /*display: none;*/
+  /*opacity: 0;*/
+  visibility: hidden;
+}
+
+.line {
+  height: 1px;
+  background: $seafoam-blue;
+  width: 98%;
+  position: absolute;
+  z-index: -1;
+  left: 1%;
+  top: 50%;
+}

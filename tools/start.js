@@ -23,6 +23,7 @@ task('start', () => new Promise(resolve => {
       .query.plugins.unshift('react-hot-loader/babel');
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
     config.plugins.push(new webpack.NoErrorsPlugin());
+    console.log(config.module.loaders[0].query.presets.push('react-hmre'));
   }
 
   const bundler = webpack(config);
@@ -60,7 +61,7 @@ task('start', () => new Promise(resolve => {
     // no need to watch '*.js' here, webpack will take care of it for us,
     // including full page reloads if HMR won't work
     files: [
-      'build/**/*.css',
+      // 'build/**/*.css',
       'build/**/*.html',
     ],
   });

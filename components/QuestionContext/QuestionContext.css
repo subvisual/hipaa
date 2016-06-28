@@ -1,0 +1,33 @@
+.context {
+}
+
+.categoryFirstWord {
+  font-weight: bold;
+}
+
+.categoryFirstWord,
+.categoryLastWords {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.count {
+  margin-top: 10px;
+}
+
+.current {
+  font-size: 60px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.total {
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  opacity: 0.6;
+}

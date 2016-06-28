@@ -1,32 +1,11 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- *
- * Copyright © 2015-2016 Konstantin Tarkus (@koistya)
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
-import 'babel-polyfill';
-import 'whatwg-fetch';
-import { createApp } from 'react-app';
+import React from 'react';
+import { Provider } from 'react-redux'
+import { render } from 'react-dom';
 import store from './store';
 import routes from '../routes';
+
 import './reset.css';
 
-createApp({
-  routes,
-  context: { store },
-  container: document.getElementById('container'),
-});
-
-// if (module.hot) {
-//   module.hot.accept(() => {
-//     createApp({
-//       routes,
-//       context: { store },
-//       container: document.getElementById('container'),
-//     });
-//   });
-// }
+render((
+  <Provider store={store}>{routes}</Provider>
+), document.getElementById('container'));

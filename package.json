@@ -45,8 +45,8 @@
     "postcss-calc": "^5.2.1",
     "postcss-color-function": "^2.0.1",
     "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.1",
     "postcss-custom-selectors": "^3.0.0",
+    "postcss-for": "^2.0.3",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-media-minmax": "^2.1.2",
@@ -54,11 +54,12 @@
     "postcss-nesting": "^2.3.1",
     "postcss-selector-matches": "^2.0.1",
     "postcss-selector-not": "^2.0.0",
+    "postcss-simple-vars": "^2.0.0",
     "react": "^15.0.2",
-    "react-app": "^1.0.0-alpha.3",
     "react-dom": "^15.0.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
     "redux": "^3.5.2",
     "redux-form": "^5.2.5",
     "s3": "^4.4.0",
@@ -102,5 +103,10 @@
     "build:debug": "node tools/build",
     "deploy": "node tools/deploy.gh --release",
     "start": "node tools/start"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.1.1",
+    "install": "^0.8.1",
+    "npm": "^3.10.2"
   }
 }
