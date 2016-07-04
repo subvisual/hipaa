@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
@@ -11,9 +12,11 @@ function Radio(props) {
     [styles.checked]: checked,
   });
 
+  const inputProps = _.pick(props, ['checked', 'value', 'name', 'onClick'])
+
   return (
     <label onClick={() => onChange(value)} className={className}>
-      <inut {...props} type="radio" value={value} className={styles.input} />
+      <input {...inputProps} type="radio" value={value} className={styles.input} />
       {label}
     </label>
   );

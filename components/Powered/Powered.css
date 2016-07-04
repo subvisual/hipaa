@@ -14,7 +14,7 @@
   background-color: $pale-grey;
   background-image: url('../../static/powered.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   width: 119px;
   height: 20px;
 }

@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import styles from './QuestionContext.css';
 
@@ -25,9 +26,20 @@ class QuestionContext extends Component {
           {categoryLastWords.join(' ')}
         </div>
         <div className={styles.count}>
-          <span className={styles.current}>
-            {this.props.current}
-          </span>
+          <ReactCSSTransitionGroup
+            transitionName={{
+              enter: styles.currentEnter,
+              enterActive: styles.currentEnterActive,
+              leave: styles.currentLeave,
+              leaveActive: styles.currentLeaveActive,
+            }}
+            transitionEnterTimeout={150}
+            transitionLeaveTimeout={150}
+          >
+            <span key={this.props.current} className={styles.current}>
+              {this.props.current}
+            </span>
+          </ReactCSSTransitionGroup>
           <span className={styles.total}>
             /{this.props.total}
           </span>

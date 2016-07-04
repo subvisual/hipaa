@@ -18,6 +18,13 @@
   margin-top: 10px;
 }
 
+.total {
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
 .current {
   font-size: 60px;
   letter-spacing: 4px;
@@ -25,9 +32,15 @@
   font-weight: bold;
 }
 
-.total {
-  font-size: 35px;
-  letter-spacing: 4px;
-  color: #ffffff;
-  opacity: 0.6;
+.currentEnter {
+  display: none;
+}
+
+.currentEnterActive {
+}
+
+.currentLeave {
+}
+
+.currentLeaveActive {
 }
