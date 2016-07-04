@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^1.8.0",
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.1.1",
+    "express": "^4.14.0",
     "extend": "^3.0.0",
     "fastclick": "^1.0.6",
     "fbjs": "^0.8.2",
@@ -93,6 +94,7 @@
     }
   },
   "scripts": {
+    "postinstall": "npm run build",
     "eslint": "eslint components core routes test tools",
     "stylelint": "stylelint \"components/**/*.css\" \"routes/**/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
@@ -108,5 +110,8 @@
     "babel-preset-react-hmre": "^1.1.1",
     "install": "^0.8.1",
     "npm": "^3.10.2"
+  },
+  "engines": {
+    "node": "6.2.0"
   }
 }
