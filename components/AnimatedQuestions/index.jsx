@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 import Question from '../Question';
@@ -9,30 +10,40 @@ class AnimatedQuestions extends Component {
     fields: PropTypes.object.isRequired,
     current: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
+    onChange: PropTypes.func.isRequired,
   }
 
-  constructor() {
-    super();
-    this.state = { windowWidth: window.innerWidth * .9 };
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowWidth: window.innerWidth * .9,
+      onChangeHash: _.mapValues(props.fields, field => {
+        const num = parseInt(field.name.split('question')[1], 10);
+        return (value) => {
+          field.onChange(value);
+          props.onChange(num);
+        };
+      }),
+    };
+  }
+
+  inputFor = (num) => {
+    const input = this.props.fields[`question${num}`];
+    return _.extend({}, input, {
+      onChange: this.state.onChangeHash[`question${num}`]
+    });
   }
 
   renderQuestion = (num) => {
-    const className = classNames({
-      [styles.question]: true,
-    });
-
     const inlineStyles = {
-      transform: `translateX(${this.state.windowWidth * num}px)`
+      transform: `translateX(${this.state.windowWidth * (num - 1)}px)`
     };
 
     return (
-      <div key={num} className={className} style={inlineStyles}>
+      <div key={num} className={styles.question} style={inlineStyles}>
         <Question
           title="DO YOU HAVE A UNIQUE USER IDENTIFICATION?"
-          input={this.props.fields.question1}
-          category="Technical Requirements"
-          current={num}
-          total={this.props.total}
+          {...this.inputFor(num)}
         >
           This applies specifically to clearinghouses that are part of
           larger organizations. In that case, make sure the clearinghouse
@@ -44,15 +55,13 @@ class AnimatedQuestions extends Component {
   }
 
   render() {
-    console.log(this.state)
     const style = {
       transform: `translateX(-${(this.props.current - 1) * this.state.windowWidth}px)`,
     };
-    console.log(style)
 
     return (
       <div className={styles.root} style={style}>
-        {_.range(0, this.props.total).map(this.renderQuestion)}
+        {_.range(1, this.props.total + 1).map(this.renderQuestion)}
       </div>
     );
   }

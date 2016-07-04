@@ -1,6 +1,6 @@
 .root {
   position: relative;
-  transition: all .6s ease-out;
+  transition: all .5s ease-out;
 }
 
 .question:not(:first-child) {

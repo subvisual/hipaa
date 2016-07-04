@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -48,15 +50,14 @@ table {
 	border-spacing: 0;
 }
 
-body, html {
+body, html, #container {
   font-family: proxima-nova;
-}
-
-:global {
-  body, html, #container {
-		-webkit-font-smoothing: antialiased;
-    height: 100%;
-  }
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background-color: $pale-grey;
+	-webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 *, *::before, *::after{

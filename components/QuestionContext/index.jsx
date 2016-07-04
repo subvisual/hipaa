@@ -9,9 +9,12 @@ class QuestionContext extends Component {
     total: PropTypes.number.isRequired,
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.current !== this.props.current;
+  }
+
   render() {
     const [categoryFirstWord, ...categoryLastWords] = this.props.category.split(' ');
-    console.log(categoryFirstWord, categoryLastWords)
 
     return (
       <div className={styles.context}>

@@ -14,8 +14,9 @@
   border-radius: 50%;
   border: 1px solid $seafoam-blue;
   text-align: center;
-  background-color: white;
+  background-color: $pale-grey;
   cursor: pointer;
+  z-index: 1;
 }
 
 .itemSelected {
@@ -23,8 +24,9 @@
   height: 16px;
   border-radius: 50%;
   text-align: center;
-  background-color: $color-blue;
-  background-image: linear-gradient(to bottom, $seafoam-blue, $color-blue);
+  background-color: $cerulean-two;
+  background-image: linear-gradient(to bottom, $seafoam-blue, $cerulean-two);
+  z-index: 1;
 }
 
 .input {
@@ -38,7 +40,7 @@
   background: $seafoam-blue;
   width: 98%;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: 1%;
   top: 50%;
 }

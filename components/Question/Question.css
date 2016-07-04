@@ -47,7 +47,7 @@
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 0 8px 16px 0 rgba(9, 171, 241, 0.2);
-  border: solid 1px $color-blue;
+  border: solid 1px $cerulean-two;
   padding: 10px 20px 10px 40px;
   cursor: pointer;
   transition: all linear 0.2s;
@@ -66,7 +66,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: solid 1px $color-blue;
+    border: solid 1px $cerulean-two;
   }
 }
 
@@ -88,6 +88,6 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: $color-blue;
+    background-color: $cerulean-two;
   }
 }

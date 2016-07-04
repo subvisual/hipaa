@@ -1,0 +1,24 @@
+@import "../variables";
+
+.root {
+}
+
+.title {
+  color: $bluish-grey;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.image {
+  background-color: $pale-grey;
+  background-image: url('../../static/powered.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 119px;
+  height: 20px;
+}
+
+.hidden {
+  opacity: 0;
+}
